@@ -1,0 +1,31 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_CHECKLIST_ADD_ITEM_TITLE)}{$field['subtitle']}</div></p>
+  <p>{$field['item_notice']}</p>
+  <form action="{:U('/Panel/additemdone')}" method="post">
+    <table class="forms" align="center">
+      <input type="hidden" name="id" value="{$field['judge_id']}" />
+      <input type="hidden" name="type" value="{$field['item_type']}" />
+      <tr>
+        <td class="thin">{$field['item_date']}</td>
+        <td class="wide"><input type="text" name="date" class="smallInput"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{$field['item_subject']}</td>
+        <td class="wide"><input type="text" name="subject" class="smallInput"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{$field['item_body']}</td>
+        <td class="wide"><input type="text" name="body" class="smallInput"/></td>
+      </tr>     
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="userreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="usersubmit" id="usersubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+  <p align="center"><a href="javascript:history.back(-1);">{:C(STR_BACK)}</a></p>
+
+<include file="footer" />

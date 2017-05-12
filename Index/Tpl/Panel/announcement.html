@@ -1,0 +1,26 @@
+<include file="header" />
+    <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_CHANGE_ANNOUNCEMENT)}</div></p>
+
+  <form action="{:U('changeannouncementsubmit')}" method="post">
+    <table class="forms" align="center">
+      <tr>
+        <td class="thin">{:C(STR_LAST_MODIFIED)}</td>
+        <td class="wide">{$origannouncement['title']}</td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_ANNOUNCEMENT)}</td>
+        <td class="wide"><textarea name="content" class="textArea1">{$origannouncement['content']}</textarea></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_VALIDATE_PWD)}</td>
+        <td class="wide"><input type="password" name="password" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="cpreset" />
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="cpsubmit" id="cpsubmit" /></td>
+      </tr> 
+    </table>
+  </form>
+  <include file="footer" />

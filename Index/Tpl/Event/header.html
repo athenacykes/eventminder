@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{:C(STR_WEBSITE_TITLE)}</title>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="banner">
+    <h1>{:C(STR_WEBSITE_HEADER)}</h1>
+  </div>
+  <div id="navbar">
+    <ul>
+      <li><a href="{:U('/Event/logout')}">{:C(STR_LOGOUT)}</a></li>
+      <li><a href="http://www.mtgjudge.cn/" class="right">{:C(STR_BACK_TO_MAINSITE)}</a></li>
+    </ul>
+  </div>
+
+  <div class="clear"></div>
+  <div id="sidebar">
+    <p>{$_SESSION['fullname']}</p>
+     <div class="navlist">
+      <ul>
+        <li><a href="{:U('/Panel/index')}">{:C(STR_CONTROL_PANEL)}</a></li>
+        <li><a href="{:U('/Store/index')}">{:C(STR_FAVORITE_STORE)}</a></li>
+        <li><a href="{:U('/Store/storelist')}">{:C(STR_STORE_LIST)}</a></li>
+        <li><a href="{:U('/Panel/showchecklist')}">{:C(STR_L2_CHECKLIST_1)}</a></li>
+      </ul>
+    </div>
+    <p>{:C(STR_NAVIGATE)}</p>
+    <div class="navlist">
+      <ul>
+        <li><a href="{:U('/Event/index')}">{:C(STR_EVENT_CALENDAR)}</a></li>
+        <li><a href="{:U('/Event/eventlist',Array('judge' => $_SESSION['id']))}">{:C(STR_MY_EVENTS)}</a></li>
+        <li><a href="{:U('/Event/eventlist',Array('judge' => $_SESSION['id'], 'past' => '1'))}">{:C(STR_MY_PAST_EVENTS)}</a></li>
+        <li><a href="{:U('/Event/eventlist')}">{:C(STR_FUTURE_EVENT)}</a></li>
+        <li><a href="{:U('/Event/eventlist',Array('past' => '1'))}">{:C('STR_PAST_EVENT_SHORT')}</a></li>
+        <li><a href="{:U('/Event/championlist')}">{:C('STR_CHAMPION_LIST')}</a></li>
+        <li><a href="{:U('/Event/add')}">{:C(STR_ADD_EVENT)}</a></li>
+        <li><a href="{:U('/Event/import')}">{:C(STR_EXCEL_IMPORT)}</a></li>
+        <li><a href="{:U('/Event/cleanup')}">{:C(STR_CLEANUP)}</a></li>
+      </ul>
+    </div>
+    <p>{:C(STR_USEFUL_LINKS)}</p>
+    <div class="navlist">
+      <ul>
+        <li><a href="{:C(STR_HELP_URL)}">{:C(STR_HELP)}</a></li>
+        <li><a href="{:C(STR_DOCUMENTS_URL)}">{:C(STR_DOCUMENTS)}</a></li>
+        <li><a href="{:C(STR_JUDGEWIKI_URL)}">{:C(STR_JUDGEWIKI)}</a></li>
+        <li><a href="{:C(STR_JUDGEAPPS_URL)}">{:C(STR_JUDGEAPPS)}</a></li>
+        <li><a href="{:C(STR_JUDGECENTER_URL)}">{:C(STR_JUDGECENTER)}</a></li>
+      </ul>
+    </div>
+    <p>&nbsp;</p>
+  </div>

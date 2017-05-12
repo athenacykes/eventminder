@@ -1,0 +1,7 @@
+<include file="header" />
+    <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_L2_CHECKLIST)}</div></p>
+    <div style="text-align: center;"><form action="{:U('/Panel/adminchecklist')}" method="get">{:C(STR_CHECKLIST_ADMIN)}<input type="text" name="id" class="tinyInput"/><input type="submit" value="{:C(STR_CHECKLIST_GOTO)}" name="usersubmit" id="usersubmit"/></form></div>
+
+{$checklist}
+
+<include file="footer" />

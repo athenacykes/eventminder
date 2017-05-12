@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{:C(STR_WEBSITE_TITLE)}</title>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="banner">
+    <h1>{:C(STR_WEBSITE_HEADER)}</h1>
+  </div>
+  <div id="navbar">
+    <ul>
+      <li><a href="http://www.mtgjudge.cn/" class="right">{:C(STR_BACK_TO_MAINSITE)}</a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+    <div id="sidebar">
+	<div class="navlist">
+      <ul>
+        <li><a href="{:U('login')}">{:C(STR_LOGIN)}</a></li>
+        <li><a href="{:U('register')}">{:C(STR_REGISTER)}</a></li>
+      </ul>
+    </div>
+    <p>{:C(STR_NAVIGATE)}</p>
+    <div class="navlist">
+      <ul>
+        <li><a href="{:U('index')}">{:C(STR_EVENT_CALENDAR)}</a></li>
+        <li><a href="{:U('storelist')}">{:C(STR_STORE_LIST)}</a></li>
+        <li><a href="{:U('eventlist')}">{:C(STR_FUTURE_EVENT)}</a></li>
+        <li><a href="{:U('eventlist',Array('past' => '1'))}">{:C('STR_PAST_EVENT_SHORT')}</a></li>
+      </ul>
+    </div>
+    <p>{:C(STR_USEFUL_LINKS)}</p>
+    <div class="navlist">
+      <ul>
+        <li><a href="{:C(STR_HELP_URL)}">{:C(STR_HELP)}</a></li>
+        <li><a href="{:C(STR_DOCUMENTS_URL)}">{:C(STR_DOCUMENTS)}</a></li>
+        <li><a href="{:C(STR_JUDGEWIKI_URL)}">{:C(STR_JUDGEWIKI)}</a></li>
+        <li><a href="{:C(STR_JUDGEAPPS_URL)}">{:C(STR_JUDGEAPPS)}</a></li>
+        <li><a href="{:C(STR_JUDGECENTER_URL)}">{:C(STR_JUDGECENTER)}</a></li>
+      </ul>
+    </div>
+    
+    <p>&nbsp;</p>
+  </div>

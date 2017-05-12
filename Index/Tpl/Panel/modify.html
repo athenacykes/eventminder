@@ -1,0 +1,41 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_EDIT_USER)}</div></p>
+  <form action="{:U('/Panel/modifyuser')}" method="post">
+    <table class="forms" align="center">
+      <input type="hidden" name="userid" value="{$user['id']}" />
+      <tr>
+        <td class="thin">{:C(STR_USERNAME)}</td>
+        <td class="wide"><input type="text" name="username" class="smallInput" maxLength="20" value="{$user['username']}"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_REALNAME)}</td>
+        <td class="wide"><input type="text" name="fullname" class="smallInput" maxLength="20" value="{$user['fullname']}"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_DCI_NUMBER)}</td>
+        <td class="wide"><input type="text" name="userdci" class="smallInput" maxLength="20" value="{$user['dci']}"/></td>
+      </tr>     
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide"><input type="text" name="usercity" class="smallInput" maxLength="20" value="{$user['city']}"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_JUDGELEVEL)}</td>
+        <td class="wide"><select name="userlevel">
+          <option value="1" index="1" {$selectlevel['1']}>{:C(STR_LEVEL_1)}</option>
+          <option value="2" index="2" {$selectlevel['2']}>{:C(STR_LEVEL_2)}</option>
+          <option value="3" index="3" {$selectlevel['3']}>{:C(STR_LEVEL_3)}</option>
+          <option value="0" index="0" {$selectlevel['0']}>{:C(STR_UNCERTIFIED)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="userreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="usersubmit" id="usersubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+
+<include file="footer" />

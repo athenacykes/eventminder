@@ -1,0 +1,31 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_MODIFY_TRAVELGUIDE)}</div></p>
+  <form action="{:U('/Store/modifytravelguidedone')}" method="post">
+    <table class="forms" align="center">
+      <input type="hidden" name="store" value="{$store['id']}" />
+      <tr>
+        <td class="thin">{:C(STR_STORE_NAME)}</td>
+        <td class="wide">{$store['name']}</td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide">{$store['city']}</td>
+      </tr>    
+      <tr>
+        <td class="thin">{:C(STR_STORE_LOCATION)}</td>
+        <td class="wide">{$store['location']}</td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_STORE_TRAVELGUIDE)}</td>
+        <td class="wide" style="text-align: left"><textarea name="content" class="textArea1">{$tg['content']}</textarea></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="tgreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="tgsubmit" id="tgsubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />

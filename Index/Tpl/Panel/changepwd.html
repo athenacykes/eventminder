@@ -1,0 +1,30 @@
+<include file="header" />
+    <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_CHANGE_PASSWORD)}</div></p>
+
+  <form action="{:U('changepwdsubmit')}" method="post">
+    <table class="forms" align="center">
+      <tr>
+        <td class="thin">{:C(STR_OLD_PASSWORD)}</td>
+        <td class="wide"><input type="password" name="oldpassword" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_NEW_PASSWORD)}</td>
+        <td class="wide"><input type="password" name="newpassword" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_NEW_PASSWORD_CONFIRM)}</td>
+        <td class="wide"><input type="password" name="confirmpassword" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_VALIDATE_DCI)}</td>
+        <td class="wide" style="text-align: left"><input type="text" name="dci" class="dciInput" maxLength="10"/> {:C(STR_VALIDATE_DCI_REMINDER)}</td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="cpreset" />
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="cpsubmit" id="cpsubmit" /></td>
+      </tr> 
+    </table>
+  </form>
+  <include file="footer" />

@@ -1,0 +1,55 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_EVENTADMIN_MODIFY)}</div></p>
+  <form action="{:U('/Event/modifyevent')}" method="post">
+    <table class="forms" align="center">
+      <input type="hidden" name="eventid" value="{$event['id']}" />
+      <tr>
+        <td class="thin">{:C(STR_EVENT_NAME)}</td>
+        <td class="wide"><input type="text" name="eventname" class="smallInput" value="{$event['name']}" maxLength="50"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide"><input type="text" name="eventcity" class="smallInput" value="{$event['city']}" maxLength="10"/></td>
+      </tr>    
+      <tr>
+        <td class="thin">{:C(STR_EVENT_LOCATION)}</td>
+        <td class="wide"><input type="text" name="eventlocation" class="smallInput" value="{$event['location']}" maxLength="50"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_DATE)}</td>
+        <td class="wide" style="text-align: left"><input type="text" name="eventdate" class="dateInput" value="{$event['event_date']}" maxLength="8"/> {:C(STR_EVENT_DATE_REMINDER)}</td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_TYPE)}</td>
+        <td class="wide"><select name="eventtype">
+          <option value="GPT" index="GPT" {$selecttype['GPT']}>{:C(STR_GPT_LONG)}</option>
+          <option value="PPTQ" index="PPTQ" {$selecttype['PPTQ']}>{:C(STR_PPTQ_LONG)}</option>
+          <option value="RPTQ" index="RPTQ" {$selecttype['RPTQ']}>{:C(STR_RPTQ_LONG)}</option>
+          <option value="Other" index="Other" {$selecttype['Other']}>{:C(STR_OTHER_LONG)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_FORMAT)}</td>
+        <td class="wide"><select name="eventformat">
+          <option value="Standard" index="Standard" {$selectformat['Standard']}>{:C(STR_STANDARD_LONG)}</option>
+          <option value="Modern" index="Modern" {$selectformat['Modern']}>{:C(STR_MODERN_LONG)}</option>
+          <option value="Limited" index="Limited" {$selectformat['Limited']}>{:C(STR_LIMITED_LONG)}</option>
+          <option value="Legacy" index="Legacy" {$selectformat['Legacy']}>{:C(STR_LEGACY_LONG)}</option>
+          <option value="Mixed" index="Mixed" {$selectformat['Mixed']}>{:C(STR_MIXED_LONG)}</option>
+          <option value="Other" index="Other" {$selectformat['Other']}>{:C(STR_OTHER_LONG)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_DESCRIPTION)}</td>
+        <td class="wide"><textarea name="eventdescription" class="textArea1" value="{$event['description']}"></textarea></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="eventreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="eventsubmit" id="eventsubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />

@@ -1,0 +1,56 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_ADD_EVENT)}</div></p>
+  <p>{:C(STR_EVENTADD_NOTICE)}</p>
+
+  <form action="{:U('/Event/addevent')}" method="post">
+    <table class="forms" align="center">
+      <tr>
+        <td class="thin">{:C(STR_EVENT_NAME)}</td>
+        <td class="wide"><input type="text" name="eventname" class="smallInput" maxLength="50"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide"><input type="text" name="eventcity" class="smallInput" maxLength="10"/></td>
+      </tr>    
+      <tr>
+        <td class="thin">{:C(STR_EVENT_LOCATION)}</td>
+        <td class="wide"><input type="text" name="eventlocation" class="smallInput" maxLength="50"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_DATE)}</td>
+        <td class="wide" style="text-align: left"><input type="text" name="eventdate" class="dateInput" maxLength="8"/> {:C(STR_EVENT_DATE_REMINDER)}</td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_TYPE)}</td>
+        <td class="wide"><select name="eventtype">
+          <option value="GPT">{:C(STR_GPT_LONG)}</option>
+          <option value="PPTQ">{:C(STR_PPTQ_LONG)}</option>
+          <option value="RPTQ">{:C(STR_RPTQ_LONG)}</option>
+          <option value="Other">{:C(STR_OTHER_LONG)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_EVENT_FORMAT)}</td>
+        <td class="wide"><select name="eventformat">
+          <option value="Standard">{:C(STR_STANDARD_LONG)}</option>
+          <option value="Modern">{:C(STR_MODERN_LONG)}</option>
+          <option value="Limited">{:C(STR_LIMITED_LONG)}</option>
+          <option value="Legacy">{:C(STR_LEGACY_LONG)}</option>
+          <option value="Mixed">{:C(STR_MIXED_LONG)}</option>
+          <option value="Other">{:C(STR_OTHER_LONG)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_DESCRIPTION)}</td>
+        <td class="wide"><textarea name="eventdescription" class="textArea1"></textarea></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="eventreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="eventsubmit" id="eventsubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />

@@ -1,0 +1,66 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_REGISTER)}</div></p>
+  
+  <form action="{:U('reguser')}" method="post">
+    <table class="forms" align="center">
+      <tr>
+        <th colspan="2">{:C(STR_REGISTER_NOTICE)}</th>
+      </tr>
+      <tr>
+        <td colspan="2">{:C(STR_REGISTER_NOTICE_TEXT)}</td>
+      </tr>
+      <tr>
+        <th colspan="2"></th>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_USERNAME)}</td>
+        <td class="wide"><input type="text" name="username" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_PASSWORD)}</td>
+        <td class="wide"><input type="password" name="userpassword" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_CONFIRM_PASSWORD)}</td>
+        <td class="wide"><input type="password" name="confirmpassword" class="smallInput" maxLength="20"/></td>
+      </tr>  
+      <tr>
+        <td class="thin">{:C(STR_REALNAME)}</td>
+        <td class="wide"><input type="text" name="fullname" class="smallInput" maxLength="20"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_DCI_NUMBER)}</td>
+        <td class="wide"><input type="text" name="userdci" class="smallInput" maxLength="20"/></td>
+      </tr>     
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide"><input type="text" name="usercity" class="smallInput" maxLength="20"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_JUDGELEVEL)}</td>
+        <td class="wide"><select name="userlevel">
+          <option value="1">{:C(STR_LEVEL_1)}</option>
+          <option value="2">{:C(STR_LEVEL_2)}</option>
+          <option value="3">{:C(STR_LEVEL_3)}</option>
+          <option value="0">{:C(STR_UNCERTIFIED)}</option>
+          </select></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_VALIDATE_QUESTION)}</td>
+        <td class="wide">{$regquestion}</td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_ANSWER)}</td>
+        <td class="wide"><input type="text" name="useranswer" class="smallInput" maxLength="20"/></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="hidden" value="{$regid}" name="regid" id="regid" />
+        <input type="reset" value="{:C(STR_RESET)}" name="regreset" />
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="regsubmit" id="regsubmit" /></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />

@@ -1,0 +1,20 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_EXCEL_IMPORT)}</div></p>
+  <p>{:C(STR_IMPORT_NOTICE)}</p>
+
+  <form action="{:U('/Event/importaction')}" method="post" enctype="multipart/form-data">
+    <table class="forms" align="center">
+      <tr>
+        <th>{:C(STR_CHOOSE_FILE)}</th>
+        <td class="wide"><input type="file" name="import" /></td>
+      </tr>
+      <tr>
+        <td class="thin">
+        <input type="reset" value="{:C(STR_RESET)}" name="eventreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_UPLOAD)}" name="eventsubmit" id="eventsubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />

@@ -1,0 +1,25 @@
+<include file="header" />
+
+    <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_STATS_TITLE)}</div></p>
+
+  {$stats}
+<form action="{:U('/Stats/index')}" method="post">
+  <table align="center" class="forms">
+      <tr>
+        <th colspan="2">{:C(STR_STATS_DATERANGE)}</th></tr>
+      <tr>
+        <td class="thin">{:C(STR_STATS_STARTRANGE)}</td>
+        <td class="wide"><input type="text" name="start" class="smallInput" maxLength="8" value="{$range['start']}"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_STATS_ENDRANGE)}</td>
+        <td class="wide"><input type="text" name="end" class="smallInput" maxLength="8" value="{$range['end']}"/></td>
+      </tr>
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="rangereset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="rangesubmit" id="rangesubmit"/></td>
+      </tr> 
+  </table>
+<include file="footer" />

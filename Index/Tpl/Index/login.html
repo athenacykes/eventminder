@@ -1,0 +1,21 @@
+<include file="header" />
+    <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_LOGIN)}</div></p>
+ <form action="{:U('auth')}" method="post">
+    <table class="forms" align="center">
+      <tr>
+        <td class="thin">{:C(STR_USERNAME)}</td>
+        <td class="wide"><input type="text" name="username" class="smallInput" maxLength="20"/></td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_PASSWORD)}</td>
+        <td class="wide"><input type="password" name="password" class="smallInput" maxLength="20"/></td>
+      </tr>    
+ 
+      <tr>
+        <td colspan="2" align="center">
+        <input type="submit" value="{:C(STR_SUBMIT)}" name="loginsubmit" id="loginsubmit"/>
+        </td>
+      </tr> 
+    </table>
+  </form>
+ <include file="footer" />

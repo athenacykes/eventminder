@@ -1,0 +1,35 @@
+<include file="header" />
+  
+  <p><div style="text-align: center; font-weight: bold; font-size: 110%;">{:C(STR_FILL_CHAMPION)}</div></p>
+  <form action="{:U('/Event/addchampion')}" method="post">
+    <table class="forms" align="center">
+      <input type="hidden" name="eventid" value="{$event['id']}" />
+      <tr>
+        <td class="thin">{:C(STR_EVENT_NAME)}</td>
+        <td class="wide">{$event['name']}</td>
+      </tr>
+      <tr>
+        <td class="thin">{:C(STR_CITY)}</td>
+        <td class="wide">{$event['city']}</td>
+      </tr>    
+      <tr>
+        <td class="thin">{:C(STR_EVENT_DATE)}</td>
+        <td class="wide">{:formatDate($event['event_date'])}</td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_CHAMPION_NAME)}</td>
+        <td class="wide" style="text-align: left"><input type="text" name="championname" class="smallInput" maxLength="20"/></td>
+      </tr> 
+      <tr>
+        <td class="thin">{:C(STR_CHAMPION_DCI)}</td>
+        <td class="wide" style="text-align: left"><input type="text" name="championdci" class="smallInput" maxLength="10"/></td>
+      </tr> 
+      <tr>
+        <td>
+        <input type="reset" value="{:C(STR_RESET)}" name="eventreset"/>
+        </td>
+        <td><input type="submit" value="{:C(STR_SUBMIT)}" name="eventsubmit" id="eventsubmit"/></td>
+      </tr> 
+    </table>
+  </form>
+<include file="footer" />
